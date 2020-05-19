@@ -85,7 +85,7 @@ async def main(args) -> None:
                 print(f"[{i}] {item[0]}: {item[1]}")
 
             choice = input(":> ").strip()
-            if not choice.isdigit():
+            if not choice.isdigit() or not int(choice) < len(replies):
                 return
 
             person = replies[int(choice)]
@@ -127,7 +127,7 @@ async def main(args) -> None:
                 print(f"[{i}] {item[0]}: {item[1]}")
 
             choice = input(":> ").strip()
-            if not choice.isdigit():
+            if not choice.isdigit() or not int(choice) < len(replies):
                 return
 
             person = replies[int(choice)]
